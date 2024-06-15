@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+//tailwindcss
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.gstatic.com");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* styles.scss or a global stylesheet */
+}

@@ -1,0 +1,68 @@
+<div class="cards-top">
+  <app-card width="380px" height="175px" id="card1">
+    <div class="content">
+      <p>Congratulations John! 🎉</p>
+      <span>Best seller of the month</span>
+      <h3>50k$</h3>
+      <app-button text="View Sales " color="#7367f0"></app-button>
+      <img src="/assets/card.png" width="100" height="267px">
+    </div>
+  </app-card>
+
+  <app-card id="statistics" width="680px" height="175px">
+    <h1>Statistics</h1>
+    <div class="row">
+      @for (item of items; track $index) {
+      <div class="item">
+        <img [src]="item.img" />
+        <div class="text">
+          <h2>{{item.amount}}k $</h2>
+          <h4>{{item.name}}</h4>
+        </div>
+      </div>
+      }
+    </div>
+  </app-card>
+
+</div>
+
+<div class="card-grid">
+  <div class="left">
+    <div class="left-grid">
+
+      <app-card style="text-align: center;">
+        82.5k
+        Expenses
+        <apx-chart [series]="chart1.series" [chart]="chart1.chart" [plotOptions]="chart1.plotOptions"
+          [fill]="chart1.fill" [stroke]="chart1.stroke" [labels]="chart1.labels" [colors]="chart1.colors"
+          [dataLabels]="chart1.dataLabels">
+        </apx-chart>
+        <p>21K$</p> Expenses more than last month
+      </app-card>
+      <app-card height="263px">
+        <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart"
+          [plotOptions]="chartOptions4.plotOptions" [labels]="chartOptions4.labels"></apx-chart>
+      </app-card>
+    </div>
+    <app-card>
+      Generated Leads
+      Monthly Report
+      <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.plotOptions.labels" [fill]="chartOptions.fill" [xaxis]="chartOptions.xaxis">
+      </apx-chart>
+    </app-card>
+  </div>
+  <div class="right">
+    <app-card>
+      <apx-chart [series]="chart2.series" [chart]="chart2.chart" [dataLabels]="chart2.dataLabels" [fill]="chart2.fill"
+        [xaxis]="chart2.xaxis">
+      </apx-chart>
+    </app-card>
+    <app-card>
+      <apx-chart [series]="chartOptions5.series" [chart]="chartOptions5.chart" [dataLabels]="chartOptions5.dataLabels"
+        [stroke]="chartOptions5.stroke" [colors]="chartOptions5.colors" [title]="chartOptions5.title"
+        [grid]="chartOptions5.grid" [tooltip]="chartOptions5.tooltip" [plotOptions]="chartOptions5.plotOptions"
+        [yaxis]="chartOptions5.yaxis" [xaxis]="chartOptions5.xaxis"></apx-chart>
+    </app-card>
+  </div>
+</div>

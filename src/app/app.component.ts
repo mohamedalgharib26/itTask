@@ -7,30 +7,29 @@ import {
   ApexXAxis,
   NgApexchartsModule,
 } from 'ng-apexcharts';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgApexchartsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  imports: [
+    RouterOutlet,
+    NgApexchartsModule,
+    SidebarComponent,
+    NavbarComponent,
+    ButtonComponent,
+  ],
 })
 export class AppComponent {
-  series: ApexAxisChartSeries = [
-    {
-      name: 'Series 1',
-      data: [30, 40, 35, 50, 49, 60, 70, 91],
-    },
-  ];
-  chart: ApexChart = {
-    type: 'line',
-    height: 350,
-  };
-  xaxis: ApexXAxis = {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
-  };
-  ChartTitle: ApexTitleSubtitle = {
-    text: 'Basic Line Chart',
-  };
+  isSidebarCollapsed = false;
+
+  onSidebarCollapse(collapsed: boolean) {
+    this.isSidebarCollapsed = collapsed;
+  }
+
   title = 'itTask';
 }

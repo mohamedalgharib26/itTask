@@ -1,0 +1,32 @@
+<div style="margin-top: 60px;" class=" max-w-lg mx-auto bg-white rounded-lg shadow-md">
+  <!-- Wizard Steps Navigation -->
+  <div class="bg-gray-200 px-4 py-3 rounded-t-lg">
+    <div class="flex justify-center">
+      <div class="flex space-x-4">
+        <h1 class="text-lg">First Step</h1>
+        <a routerLink="/input/step1" routerLinkActive="active" class="flex items-center">
+          <div class="w-6 h-6 text-lg rounded-full  flex items-center justify-center">
+            <span class="text-gray-700">1</span>
+          </div>
+        </a>
+        <h1 class="text-lg">Second Step</h1>
+        <a routerLink="/input/step2" routerLinkActive="active" class="flex items-center">
+          <div class="w-6 h-6 text-lg rounded-full flex items-center justify-center">
+            <span class="text-gray-700">2</span>
+          </div>
+        </a>
+        <h1 class="text-lg">Third Step</h1>
+        <a routerLink="/input/step3" routerLinkActive="active" class="flex items-center">
+          <div class="w-6 h-6 text-lg rounded-full  flex items-center justify-center">
+            <span class="text-gray-700">3</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content of InputComponent -->
+  <div class="p-6">
+    <router-outlet></router-outlet> <!-- هنا سيتم عرض محتوى Step1Component أو Step2Component أو Step3Component -->
+  </div>
+</div>
