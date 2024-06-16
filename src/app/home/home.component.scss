@@ -1,7 +1,15 @@
 .cards-top {
   display: flex;
-  justify-content: space-around;
+  margin: 30px 0;
+  .top-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
   #card1 {
+    flex: 17%;
     .content {
       position: relative;
       padding: 5px 7px;
@@ -23,14 +31,13 @@
       }
       img {
         position: absolute;
-        right: 0;
+        right: -16px;
         top: 10px;
       }
     }
   }
   #statistics {
-    width: 680px;
-    height: 175px;
+    flex: 55%;
     h1 {
       font-weight: 600;
       font-size: 1.5rem;
@@ -53,18 +60,43 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-.left-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.right {
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 20px;
-}
+  gap: 40px;
+  .grid-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px;
+    .card2,
+    .card1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .card3 {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+  }
+  .right {
+    .card4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
 //media
 /* Devices between 320px and 414px */
 @media (min-width: 320px) and (max-width: 414px) {
@@ -82,6 +114,9 @@
     flex-direction: column !important;
   }
   #statistics {
+    .card {
+      height: auto !important;
+    }
     .row {
       flex-direction: column !important;
     }
