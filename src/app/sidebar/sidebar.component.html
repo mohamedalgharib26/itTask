@@ -2,7 +2,7 @@
   <div class="logo">
     <img src="/assets/logo.svg" alt="">
     <h4 *ngIf="!isCollapsed">Logo</h4>
-    <button (click)="toggleSidebar()" class="collapse-button" style="margin-left: 76px;">
+    <button (click)="toggleSidebar()" class="collapse-button">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="size-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -19,7 +19,7 @@
         <img src="/assets/icons/user.svg" alt="">
         <a *ngIf="!isCollapsed">Users</a>
       </li>
-      <li routerLinkActive="active" routerLink="/input/step1">
+      <li routerLinkActive="active" routerLink="/input">
         <img src="/assets/icons/input.svg" alt="">
         <a *ngIf="!isCollapsed">Inputs</a>
       </li>

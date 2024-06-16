@@ -9,12 +9,14 @@
   border-radius: 12px;
   color: #6f6b7d;
   transition: width 0.3s ease-in-out;
-
   &.collapsed {
     width: 80px;
-
+    .collapse-button {
+      display: inline-block;
+      margin: -16px;
+    }
     .logo {
-      justify-content: center;
+      justify-content: left;
     }
 
     .menu-items ul li {
@@ -81,6 +83,9 @@
       }
     }
   }
+  .collapse-button {
+    margin-left: 66px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -101,6 +106,9 @@
       a {
         display: none;
       }
+    }
+    .collapse-button {
+      margin-left: 10px;
     }
   }
 }
