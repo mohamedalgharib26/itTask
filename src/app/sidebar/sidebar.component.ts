@@ -1,12 +1,19 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
-  imports: [RouterLink, RouterLinkActive, NavbarComponent, RouterOutlet],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    NavbarComponent,
+    RouterOutlet,
+    CommonModule,
+  ],
 })
 export class SidebarComponent {
   constructor() {
