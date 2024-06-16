@@ -29,6 +29,8 @@
     }
   }
   #statistics {
+    width: 680px;
+    height: 175px;
     h1 {
       font-weight: 600;
       font-size: 1.5rem;
@@ -66,23 +68,46 @@
 //media
 /* Devices between 320px and 414px */
 @media (min-width: 320px) and (max-width: 414px) {
+  app-card {
+    width: 412px !important;
+    height: auto !important;
+  }
+
   .card-grid,
   .left-grid,
   .right {
     grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
   }
   .cards-top {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+  #statistics {
+    .row {
+      flex-direction: column !important;
+    }
   }
 }
 
 // Small devices (landscape phones, less than 576px)
 @media (min-width: 414px) and (max-width: 575.98px) {
+  app-card {
+    width: 412px !important;
+    height: auto !important;
+  }
   .card-grid,
   .left-grid,
   .right {
     grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
+  }
+  .cards-top {
+    flex-direction: column !important;
+  }
+  #statistics {
+    .card {
+      height: auto !important;
+    }
+    .row {
+      flex-direction: column !important;
+    }
   }
 }

@@ -1,40 +1,27 @@
 <div class="sidebar" [class.collapsed]="isCollapsed">
   <div class="logo">
     <img src="/assets/logo.svg" alt="">
-    @if (!isCollapsed) {
-    <h4>Logo</h4>
-
-    }
+    <h4 *ngIf="!isCollapsed">Logo</h4>
     <button (click)="toggleSidebar()" class="collapse-button" style="margin-left: 76px;">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="size-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
       </svg>
-
     </button>
   </div>
   <div class="menu-items">
     <ul>
       <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">
         <img src="/assets/icons/mail2.svg" alt="">
-        @if (!isCollapsed) {
-
-        <a>Home</a>
-        }
+        <a *ngIf="!isCollapsed">Home</a>
       </li>
       <li routerLinkActive="active" routerLink="/users">
         <img src="/assets/icons/user.svg" alt="">
-        @if (!isCollapsed) {
-        <a>Users</a>
-
-        }
+        <a *ngIf="!isCollapsed">Users</a>
       </li>
       <li routerLinkActive="active" routerLink="/input/step1">
         <img src="/assets/icons/input.svg" alt="">
-        @if (!isCollapsed) {
-        <a>Inputs</a>
-
-        }
+        <a *ngIf="!isCollapsed">Inputs</a>
       </li>
     </ul>
   </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
@@ -9,9 +9,15 @@ import { NavbarComponent } from '../navbar/navbar.component';
   imports: [RouterLink, RouterLinkActive, NavbarComponent, RouterOutlet],
 })
 export class SidebarComponent {
+  constructor() {
+    this.onResize();
+  }
   @Output() collapsedChange = new EventEmitter<boolean>();
   isCollapsed = false;
-
+  @HostListener('window:resize', ['$event'])
+  onResize(event?: Event) {
+    this.isCollapsed = window.innerWidth < 550;
+  }
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
     this.collapsedChange.emit(this.isCollapsed);
