@@ -100,15 +100,39 @@
 //media
 /* Devices between 320px and 414px */
 @media (min-width: 320px) and (max-width: 414px) {
+  .card-grid {
+    margin-left: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    .left {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      .card2 {
+        grid-row: 2 / span 1;
+      }
+      .card3 {
+        grid-row: 3 / span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: centerS;
+      }
+    }
+  }
+  #card1 {
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .grid-card,
+  .top-card {
+    max-width: 319px;
+  }
   .cards-top {
     flex-direction: column !important;
   }
   #statistics {
-    .card {
-      height: auto !important;
-    }
     .row {
       flex-direction: column !important;
+      align-items: center;
     }
   }
 }
