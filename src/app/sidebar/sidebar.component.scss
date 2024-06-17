@@ -9,6 +9,9 @@
   border-radius: 12px;
   color: #6f6b7d;
   transition: width 0.3s ease-in-out;
+  &.active {
+    background-color: #5b4f4f29;
+  }
   &.collapsed {
     width: 80px;
     .collapse-button {
